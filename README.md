@@ -39,7 +39,7 @@ $ env | env2ecs | jq
 # Installation
 Please follow.
 ```
-$ curl -L https://raw.githubusercontent.com/convto/etj/master/env2ecs > /usr/local/bin/env2ecs
+$ curl -L https://raw.githubusercontent.com/convto/env2ecs/master/env2ecs > /usr/local/bin/env2ecs
 $ chmod +x /usr/local/bin/env2ecs
 ```
 
