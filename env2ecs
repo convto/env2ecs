@@ -1,0 +1,13 @@
+#!/bin/bash
+
+remove_single_quote='s/'\''//g;'
+remove_double_quote='s/"//g;'
+add_linestart='s/^/{"name":"/;'
+add_lineend='s/$/"},/;'
+replace_equal='s/=/","value":"/;'
+remove_last_comma='$s/,$//g;'
+add_bracket_start='1s/^/[/;'
+add_bracket_end='$s/$/]/;'
+
+cat - | sed -e "$remove_single_quote $remove_double_quote $add_linestart $add_lineend $replace_equal" | sed -e "$remove_last_comma" | sed -e "$add_bracket_start $add_bracket_end"
+
